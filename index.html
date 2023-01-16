@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ID Card Generator</title>
+</head>
+<body>
+    
+    <div class="back">
+        <form id="myForm">
+            <h3>Please fill in the form</h3>
+            <label>Company Name:</label>
+            <input type="text" id="inCompany" placeholder="">
+            <label>Name:</label>
+            <input type="text" id="inName" placeholder="">
+            <label>Position:</label>
+            <input type="text" id="inPosition" placeholder="">
+            <label>Email:</label>
+            <input type="text" id="inEmail" placeholder="">
+            <label>Phone Number:</label>
+            <input type="text" id="inPhoneNumber" placeholder="">
+        </form>
+       
+        <div class="container">
+            <canvas class="card" id="result" background-color="#fff">
+                <header id="head">
+                    <div class="camp">
+                        <h4 id="company">Company</h4>
+                    </div>
+                </header>
+               
+                <div class="content">
+                    <img src="pp.png" id="imgDisplayed">
+                    <ul>
+                        Name: <li id="name"></li>
+                        Position: <li id="position"></li>
+                        Email: <li id="email"></li>
+                        Phone Number: <li id="phoneNumber"></li>
+                    </ul>  
+                </div>
+            </canvas>
+            
+            <div class="buttons">
+                <button type="submit" id="create">Create</button>
+                <button id="clear">Clear</button>
+                <button id="download" hidden>Download</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
