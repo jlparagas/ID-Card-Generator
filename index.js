@@ -13,6 +13,8 @@ create.addEventListener("click", prev);
 const clear = document.getElementById("clear");
 clear.addEventListener("click", erase);
 
+const download = document.getElementById("download");
+download.addEventListener("click", save);
 
 function prev(){
   let inCompany = document.getElementById('inCompany').value;
@@ -60,9 +62,7 @@ function erase() {
 }
 
 
-const download = document.getElementById("download");
-download.addEventListener("click", function(){
-
+function save(){
   if(window.navigator.msSaveBlob) {
 
     window.navigator.msSaveBlob(canvas.msToBlob(), "Card.png");
@@ -75,4 +75,4 @@ download.addEventListener("click", function(){
     a.click();
     document.body.removeChild(a);
   }
-});
+};
