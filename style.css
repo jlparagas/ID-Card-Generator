@@ -121,5 +121,7 @@ header::after{
 }
 
 canvas {
+    height: max-content;
+    width: max-content;
     background-color:#fff;
 }
