@@ -1,3 +1,4 @@
+
 function deleteRect () {
   let canvas = document.getElementById("result");
 
