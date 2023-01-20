@@ -1,34 +1,15 @@
-
-function deleteRect () {
-  let canvas = document.getElementById("result");
-
-  if (canvas != null) {
-      let ctx = canvas.getContext('2d');
-      ctx.clearRect(0,0, canvas.width, canvas.height);
-    } else {
-      let canvas = document.createElement("canvas");
-      canvas.setAttribute("id","result");
-      body.append(canvas);
-      let ctx = canvas.getContext('2d');
-      ctx.clearRect(0,0, canvas.width, canvas.height);
-    }
-};
-
+import { createCanvas } from "../sub_func/createCanvas.js";
+import { createContext } from "../sub_func/createContext.js";
+import { createDownloadButton } from "../sub_func/createDownloadButton.js";
 
 export function erase() {
-  let hideButton = document.getElementById("download");
+  let ctx = createContext();
+  let canvas = createCanvas();
+  let downloadButton = createDownloadButton();
 
-  deleteRect();
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   document.getElementById("myForm").reset();
+  downloadButton.setAttribute("hidden", "hidden");
 
-  if (hideButton != null){
-  hideButton.setAttribute("hidden", "hidden");
   console.log('Erased');
-  } else {
-    let newButton = document.createElement("button");
-    newButton.setAttribute("id","download");
-    body.append(newButton);
-    newButton.setAttribute("hidden", "hidden");
-    console.log('Erase new object');
-  }   
 }

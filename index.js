@@ -1,28 +1,12 @@
 import { save }  from "./src/download.js";
 import { erase } from "./src/erase.js";
 import { prev }  from "./src/prev.js";
- 
-export const canvas = document.getElementById("result");
-
-export const image = document.getElementById("imgDisplayed");
-
-export const hideButton = document.getElementById('download');
-
-export function createCanvas () {
-    let canvas = document.getElementById("result");
-
-    if (canvas != null) {
-        canvas = document.getElementById("result");
-      } else {
-        let newCanvas = document.createElement("canvas");
-        newCanvas.setAttribute("id", "result");
-        body.append(newCanvas);
-    }
-}
 
 function setCanvasHW() {
+    let canvas = document.getElementById("result");
     canvas.height = canvas.width / 1.616;
 };
+
 
 function clickButtons () {    
     const download = document.getElementById("download");

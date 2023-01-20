@@ -44,6 +44,7 @@ describe('Erase function', () => {
 });
 
 
+
 //This is test case reference that I've got from chatGPT
 // import { erase, hideButton, canvas } from '../index.js';
 
