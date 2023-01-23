@@ -1,4 +1,3 @@
-// this piece of code will make sure that my test will run on jsdom environment
 /**
  * @jest-environment jsdom
  */

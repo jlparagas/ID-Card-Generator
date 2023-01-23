@@ -1,4 +1,3 @@
-// this piece of code will make sure that my test will run on jsdom environment
 /**
  * @jest-environment jsdom
  */
@@ -7,8 +6,8 @@ import { save } from '../src/download';
 import expect from 'expect';
 import { jest } from '@jest/globals';
 
-describe('Prev Function', () => {
-    it('should preview the data to canvas', () => {
+describe('Save Function', () => {
+    it('should download the canvas', () => {
       // create an html elements that will use for mocking
       document.body.innerHTML = `
         <canvas id="result">
@@ -29,13 +28,6 @@ describe('Prev Function', () => {
         </canvas>
         <button id="download"></button>
       `;
-  
-        
-    //   const canvas = document.getElementById('result');
-    //   const mockContext = {
-    //     toDataURL: jest.fn()
-    //   };
-    //   canvas.getContext = jest.fn(() => mockContext);
 
       // this variable will be use for checking
       const spy = jest.spyOn(document, 'getElementById');
